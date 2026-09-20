@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AtCoder Solver Runner</title>
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>AtCoder Solver Runner</h1>
+    <p class="hint">⌘/Ctrl + Enter で実行</p>
+  </header>
+
+  <section class="card">
+    <div class="selectors">
+      <div class="field">
+        <label for="kind">コンテスト種別</label>
+        <input id="kind" value="abc" spellcheck="false">
+      </div>
+      <div class="field">
+        <label for="number">コンテスト番号</label>
+        <input id="number" placeholder="476" spellcheck="false">
+      </div>
+      <div class="field">
+        <label for="problem">問題番号</label>
+        <input id="problem" placeholder="a" spellcheck="false">
+      </div>
+    </div>
+    <p class="path" id="path"></p>
+  </section>
+
+  <section class="card">
+    <div class="field">
+      <label for="input">入力</label>
+      <textarea id="input" spellcheck="false" placeholder="標準入力をここに貼り付け"></textarea>
+    </div>
+    <button id="run" disabled><span id="run-label">実行</span> <span class="spinner" hidden></span></button>
+  </section>
+
+  <section class="card" id="result" hidden>
+    <div class="field">
+      <div class="output-head">
+        <label>出力</label>
+        <span class="badge" id="status"></span>
+      </div>
+      <pre id="stdout"></pre>
+    </div>
+    <div class="field" id="stderr-field" hidden>
+      <label>標準エラー</label>
+      <pre id="stderr" class="err"></pre>
+    </div>
+  </section>
+</main>
+</body>
+</html>
