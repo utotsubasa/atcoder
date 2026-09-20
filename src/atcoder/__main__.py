@@ -1,3 +1,3 @@
-from atcoder.server import main
+from atcoder import main
 
 main()
