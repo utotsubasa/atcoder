@@ -2,24 +2,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-
-TEMPLATE = '''class Solver:
-    def input(self):
-        pass
-
-    def solve(self):
-        pass
-
-    def output(self):
-        pass
-
-
-if __name__ == "__main__":
-    s = Solver()
-    s.input()
-    s.solve()
-    s.output()
-'''
+TEMPLATE_FILE = Path(__file__).with_name("template.py")
 
 
 def main() -> None:
@@ -34,5 +17,5 @@ def main() -> None:
         print(f"既に存在します: {rel}", file=sys.stderr)
         sys.exit(1)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(TEMPLATE)
+    path.write_text(TEMPLATE_FILE.read_text())
     print(f"作成しました: {rel}")
